@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "type-check": "tsc",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "license": "ISC",
   "devDependencies": {
