@@ -11,7 +11,7 @@ type cases = [
 ]
 
 type errors = [
-  // @ts-expect-error
+  // @ts-expect-error・・
   First<'notArray'>,
   // @ts-expect-error
   First<{ 0: 'arrayLike' }>,
