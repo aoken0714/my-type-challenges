@@ -1,44 +1,44 @@
 # my-type-challenges
 
-TypeScriptの型レベルプログラミングスキル向上のための [type-challenges](https://github.com/type-challenges/type-challenges) 課題解答集です。
+A collection of solutions for [type-challenges](https://github.com/type-challenges/type-challenges), aimed at improving TypeScript type-level programming skills.
 
-## 概要
+## Overview
 
-このリポジトリは、type-challengesの課題を解いてTypeScriptの型システムへの理解を深めることを目的としています。各課題の解答をTSファイルで管理し、学習の進捗を記録しています。
+This repository is intended to deepen understanding of TypeScript's type system by solving problems from the type-challenges project. Each solution is managed in individual TypeScript files, serving as a record of learning progress.
 
-## プロジェクト構造
+## Project Structure
 
 ```
 src/
-├── questions/     # 課題解答ファイル
-│   ├── easy/      # Easy難易度の課題
-│   ├── medium/    # Medium難易度の課題
-│   ├── hard/      # Hard難易度の課題
-│   └── extreme/   # Extreme難易度の課題
-└── utils/         # テスト用ユーティリティ
+├── questions/     # Challenge solution files
+│   ├── easy/      # Easy-level challenges
+│   ├── medium/    # Medium-level challenges
+│   ├── hard/      # Hard-level challenges
+│   └── extreme/   # Extreme-level challenges
+└── utils/         # Utilities for testing
 ```
 
-## 使い方
+## How to Use
 
-1. 各課題ファイルを開いて型定義を確認
-2. テストケースで動作を検証
-3. TypeScriptコンパイラで型チェックを実行
+1. Open a challenge file and review the type definitions
+2. Verify correctness with test cases
+3. Run the TypeScript compiler to perform type checks
 
 ```bash
-# 型チェック実行
+# Run type check for the entire project
 npm run type-check
 
-# 特定ファイルの型チェック
+# Run type check for a specific file
 npx tsc --noEmit src/questions/easy/Pick.ts
 ```
 
-## 学習目標
+## Learning Objectives
 
-- TypeScriptの高度な型機能の習得
-- 型レベルプログラミングの理解
-- 複雑な型変換・操作の実装能力向上
+- Master advanced TypeScript type features
+- Understand type-level programming
+- Improve the ability to implement complex type transformations and manipulations
 
-## 参考リンク
+## References
 
-- [type-challenges 公式リポジトリ](https://github.com/type-challenges/type-challenges)
+- [Official type-challenges repository](https://github.com/type-challenges/type-challenges)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
