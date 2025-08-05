@@ -1,0 +1,19 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'Asia/Tokyo'
+    open-pull-requests-limit: 10
+    reviewers:
+      - 'aoken0714'
+    assignees:
+      - 'aoken0714'
+    commit-message:
+      prefix: 'chore'
+      include: 'scope'
