@@ -1,0 +1,24 @@
+import type { Equal, Expect } from '@/utils/test-types';
+
+// https://github.com/type-challenges/type-challenges/blob/main/questions/00119-medium-replaceall/README.md
+type ReplaceAll<
+  T extends string,
+  From extends string,
+  To extends string,
+> = From extends ''
+  ? T
+  : T extends `${infer L}${From}${infer R}`
+    ? `${L}${To}${ReplaceAll<R, From, To>}`
+    : T;
+
+type cases = [
+  Expect<Equal<ReplaceAll<'foobar', 'bar', 'foo'>, 'foofoo'>>,
+  Expect<Equal<ReplaceAll<'foobar', 'bag', 'foo'>, 'foobar'>>,
+  Expect<Equal<ReplaceAll<'foobarbar', 'bar', 'foo'>, 'foofoofoo'>>,
+  Expect<Equal<ReplaceAll<'t y p e s', ' ', ''>, 'types'>>,
+  Expect<Equal<ReplaceAll<'foobarbar', '', 'foo'>, 'foobarbar'>>,
+  Expect<Equal<ReplaceAll<'barfoo', 'bar', 'foo'>, 'foofoo'>>,
+  Expect<Equal<ReplaceAll<'foobarfoobar', 'ob', 'b'>, 'fobarfobar'>>,
+  Expect<Equal<ReplaceAll<'foboorfoboar', 'bo', 'b'>, 'foborfobar'>>,
+  Expect<Equal<ReplaceAll<'', '', ''>, ''>>,
+];
